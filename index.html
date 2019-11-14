@@ -13,66 +13,35 @@
 
 </head>
 <body onload="init()">
-    <div id="container">
-<div class="panel">
-<h2>I have a random number <br>between 1-100</h2>
-<h3>dare to guess?</h3>
-<hr>
-    <button onclick="newGame()">NEW Game</button>
-</div>
+<div id="container">
+    <div class="panel">
+        <h2>I have a random number <br>between 1-100</h2>
+            <h3>dare to guess?</h3>
+        <hr>
+        <p>Select your difficulty setting:</p>
+        <button id="easyBtn" onclick="easyMode()" class="">Easy: Guess in 10 attempts (default)</button>
+        <button id="hardBtn" onclick="hardMode()" class="">Hard: Guess in 5 attempts</button>
+
+
+
+    <button id="newGameButton" onclick="newGame()">NEW Game</button>
+    </div>
 
 <div class="panel">
     <h3 id="textOutput">enter your guess below &amp; press enter</h3>
-    <input type ="number" id="inputBox" onchange="compareGuess()">
-    <p>Number of previous attempts: <span>0</span></p>
+    <input type ="number" id="inputBox" onchange="compareGuess()" autocomplete="off">
+    <p>Number of previous attempts: <span id="attempts"></span></p>
 </div>
 
 <div class="panel">
-    <p>your previous guesses:</p>
+    <p>Your previous guesses:</p>
     <p id="guessLog"></p>
 </div>
 
+</div>
 
 
-
-
-    </div>
-
-
-    <script>
-    var computerGuess;
-
-    function newGame() {
-        window.location.reload();
-    }
-
-    function init () {
-        computerGuess = Math.floor(Math.random() *100 +1);
-
-        console.log(computerGuess); 
-        //checking the computer guess is a whole number
-    }
-
-function compareGuess() {
-var userGuess = document.getElementById("inputBox").value;
-
-// console.log(userGuess);
-// checking user guess
-if(userGuess > computerGuess) {
-document.getElementById("textOutput").innerHTML = "Your guess is too high";
-document.getElementById("inputBox").value = "";
-
-} else if (userGuess < computerGuess) {
-    document.getElementById("textOutput").innerHTML = "Your guess is too low";
-    document.getElementById("inputBox").value = "";
-} else {
-
-    document.getElementById("textOutput").innerHTML = "Correct!";
-}
-}
-
-
-
-    </script>
+    <script src="./script.js"></script>
+    
 </body>
 </html>
