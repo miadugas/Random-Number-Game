@@ -22,8 +22,8 @@
 </div>
 
 <div class="panel">
-    <h3>enter your guess below &amp; press enter</h3>
-    <input type ="number">
+    <h3 id="textOutput">enter your guess below &amp; press enter</h3>
+    <input type ="number" id="inputBox" onchange="compareGuess()">
     <p>Number of previous attempts: <span>0</span></p>
 </div>
 
@@ -44,15 +44,35 @@
 
     function newGame() {
         window.location.reload();
-
     }
 
     function init () {
         computerGuess = Math.floor(Math.random() *100 +1);
 
-        // console.log(computerGuess); 
+        console.log(computerGuess); 
         //checking the computer guess is a whole number
     }
+
+function compareGuess() {
+var userGuess = document.getElementById("inputBox").value;
+
+// console.log(userGuess);
+// checking user guess
+if(userGuess > computerGuess) {
+document.getElementById("textOutput").innerHTML = "Your guess is too high";
+document.getElementById("inputBox").value = "";
+
+} else if (userGuess < computerGuess) {
+    document.getElementById("textOutput").innerHTML = "Your guess is too low";
+    document.getElementById("inputBox").value = "";
+} else {
+
+    document.getElementById("textOutput").innerHTML = "Correct!";
+}
+}
+
+
+
     </script>
 </body>
 </html>
