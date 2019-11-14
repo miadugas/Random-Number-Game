@@ -12,13 +12,13 @@
         <link rel="shortcut icon" href="./assets/images/favicon.ico" >
 
 </head>
-<body>
+<body onload="init()">
     <div id="container">
 <div class="panel">
 <h2>I have a random number <br>between 1-100</h2>
 <h3>dare to guess?</h3>
 <hr>
-    <button>NEW Game</button>
+    <button onclick="newGame()">NEW Game</button>
 </div>
 
 <div class="panel">
@@ -37,5 +37,22 @@
 
 
     </div>
+
+
+    <script>
+    var computerGuess;
+
+    function newGame() {
+        window.location.reload();
+
+    }
+
+    function init () {
+        computerGuess = Math.floor(Math.random() *100 +1);
+
+        // console.log(computerGuess); 
+        //checking the computer guess is a whole number
+    }
+    </script>
 </body>
 </html>
