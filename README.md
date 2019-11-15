@@ -4,4 +4,4 @@ A guess the random number game. The game involves the player guessing the comput
 
 The user interface is in HTML5, styling in CSS3, framework is Bootstrap 4 and game functionality is with JavaScript.
 
-![Image of Random-Number-Game](https://github.com/miadugas/Random-Number-Game/blob/master/assets/images/random%20number.png)
+![Image of Random-Number-Game](https://github.com/miadugas/Random-Number-Game/blob/master/assets/img/RNG.png)
