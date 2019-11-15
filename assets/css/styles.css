@@ -1,0 +1,134 @@
+/* ==== Google font ==== */
+@import url('https://fonts.googleapis.com/css?family=Lato:400,300,700,900');
+html,body { height: 100%; margin: 0px; padding: 0px; 
+    scroll-behavior: smooth;}
+
+body {
+	background-image: url(../img/main-bg.jpg);
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6em;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    background-size: cover;    
+}
+
+.mdl{
+    image-orientation: from-image;
+    height: 200px;
+    margin-bottom: -70px;
+    margin-top: -50px;
+    margin-left: -60px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #444;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+h4 {
+	font-weight: 400;
+	font-size: 20px;
+}
+
+p {
+    color: black;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.alignleft {
+    text-align: left;
+}
+.alignright {
+    text-align: right;
+}
+
+.aligncenter {
+    text-align: center;
+}
+
+/* wrapper */
+#wrapper {
+	text-align: center;
+	background: url(../img/main-bg.jpg);
+    background-size: cover;
+}
+
+#wrapper h1 {
+	margin-top: 60px;
+	margin-bottom: 40px;
+	color: #fff;
+	font-size: 45px;
+	font-weight: 900;
+	letter-spacing: -1px;
+}
+
+h2, h3 {
+    color: black;
+    font-size: 28px;
+    font-weight: bolder;
+    font-weight: 400;
+}
+
+/* container */
+#container {
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    background: #E6E8E6;
+    opacity: 1;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.panel {
+    max-width: 80%;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 10px;
+    background: grey;
+}
+
+button {
+    background: #123c81;   
+    width: 80%;
+    margin-bottom: 1.5em;
+    border-radius: 10px;
+    color: white;
+    font-size: 0.98em;
+}
+
+input {
+    border-radius: 10px;
+    width: 80%;
+    height: 4em;
+    text-align: center;
+}
+
+.activeButton {
+    background-color: rgb(9, 85, 9);
+}
+
+@media (min-width:768px) {
+    .clean .text p {
+    font-size: 16px;
+    }
+}
+
+@media (min-width:768px) {
+    .clean .text h2 {
+    font-size: 20px;
+    }
+}
+
+

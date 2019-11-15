@@ -29,7 +29,7 @@ function newGame() {
 
 function init () {
         computerGuess = Math.floor(Math.random() *100 +1);
-console.log(computerGuess); 
+// console.log(computerGuess); 
 //checking the computer guess is a whole number
 
 document.getElementById("newGameButton").style.display = "none";
@@ -61,7 +61,7 @@ if(userGuessLog.length < maxGuesses) {
         } else {
         
             document.getElementById("textOutput").innerHTML = "Correct! <br> You guessed the number in " +attempts+ " attempts";
-            document.getElementById("container").style.backgroundColor = "green";
+            document.getElementById("container").style.backgroundColor = "#037971";
             gameEnded();
         }
 
@@ -69,15 +69,15 @@ if(userGuessLog.length < maxGuesses) {
 } else {
     if(userGuess > computerGuess) {
         document.getElementById("textOutput").innerHTML = "You loose!" +"<br> the number was " + computerGuess;
-        document.getElementById("container").style.backgroundColor = "#e82c4e";
+        document.getElementById("container").style.backgroundColor = "#B3001B";
         gameEnded();
     } else if (userGuess < computerGuess) {
         document.getElementById("textOutput").innerHTML = "You loose!" +"<br> the number was " + computerGuess;
-        document.getElementById("container").style.backgroundColor = "#e82c4e";
+        document.getElementById("container").style.backgroundColor = "#B3001B";
         gameEnded();
 } else {
         document.getElementById("textOutput").innerHTML = "Correct! <br> You guessed the number in " +attempts+ " attempts";
-        document.getElementById("container").style.backgroundColor = "green";
+        document.getElementById("container").style.backgroundColor = "#037971";
         gameEnded();
 }
 

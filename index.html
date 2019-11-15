@@ -1,47 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Number Guessing Game</title>
-    <!-- CSS source file -->
-    <link rel="stylesheet" href="./style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+<!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<!-- Google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
 
-<!-- Favicons -->
-        <link rel="shortcut icon" href="./assets/images/favicon.ico" >
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Dark-Clean.css">
+<!-- font awesome link -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
-<body onload="init()">
-<div id="container">
+
+<body onload="init()">  
+<nav class="navbar navbar-light bg-light text-center navigation-clean main-nav">
+        <div class="container">
+        <div class="navbar-collapse collapse nav-content order-2">
+        </div>
+            <a class="nav">Random Number Guessing Game</a>
+    </div>
+</nav>       
+
+
+
+    <div id="container">
+        <div class="panel col-lg-10 col-xl-8 offset-lg-1 offset-xl-2"">
+            <h2> I have a random number <br> between 1-100. </h2>
+                <h3> Dare to guess? </h3>
+            <hr>
+                <p>Select your difficulty setting:</p>
+        
+                <button id="easyBtn" type="button" onclick="easyMode()" class="">Easy: Guess in 10 attempts (default)</button>
+            <br>
+            
+                <button id="hardBtn" type="button" onclick="hardMode()" class="">Hard: Guess in 5 attempts</button>
+
+        <button id="newGameButton" onclick="newGame()">Start a NEW Game?</button>
+    
+</div>       
     <div class="panel">
-        <h2>I have a random number <br>between 1-100</h2>
-            <h3>dare to guess?</h3>
-        <hr>
-        <p>Select your difficulty setting:</p>
-        <button id="easyBtn" onclick="easyMode()" class="">Easy: Guess in 10 attempts (default)</button>
-        <button id="hardBtn" onclick="hardMode()" class="">Hard: Guess in 5 attempts</button>
-
-
-
-    <button id="newGameButton" onclick="newGame()">NEW Game</button>
+        <h3 id="textOutput">enter your guess below &amp; press enter</h3>
+        <input type ="number" id="inputBox" onchange="compareGuess()" autocomplete="off">
+        <p>Number of previous attempts: <span id="attempts"></span></p>
     </div>
 
-<div class="panel">
-    <h3 id="textOutput">enter your guess below &amp; press enter</h3>
-    <input type ="number" id="inputBox" onchange="compareGuess()" autocomplete="off">
-    <p>Number of previous attempts: <span id="attempts"></span></p>
+    <div class="panel">
+        <p>Your previous guesses:</p>
+        <p id="guessLog"></p>
+    </div>
+                
 </div>
-
-<div class="panel">
-    <p>Your previous guesses:</p>
-    <p id="guessLog"></p>
-</div>
-
-</div>
-
-
-    <script src="./script.js"></script>
     
+
+
+<!-- Footer -->
+    <div class="footer-basic">
+        <footer>
+            <div class="social">
+                    <a href="https://github.com/miadugas"><i class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/miadugas/"><i class="fa fa-linkedin"></i></a>
+                <a href="https://twitter.com/miainbatcountry"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/miaelysedugas"><i class="fa fa-facebook"></i></a>
+</div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"></li>
+            </ul>
+            <ul class="copyright">
+                    <li>&copy; Copyright 2019 Mia Dugas. Some Rights Reserved. Made with <i class="fa fa-xs fa-heart" style="color:red "></i></li>
+                </ul>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
