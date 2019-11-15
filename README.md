@@ -4,4 +4,4 @@ A guess the random number game. The game involves the player guessing the comput
 
 The user interface is in HTML, styling in CSS and game functionality is with JavaScript.
 
-![Image of Random-Number-Game](https://github.com/miadugas/Mia-JavaScript-Password-Gen/blob/master/images/JavaScript%20PW-1.png)
+![Image of Random-Number-Game](https://github.com/miadugas/Random-Number-Game/blob/master/assets/images/random%20number.png)
